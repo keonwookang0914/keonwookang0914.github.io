@@ -80,7 +80,7 @@
     - title: "패키징 빌드 전용 크래시 — DisplayName 자동 변환"
       problem: "에디터에서는 멀쩡한데 패키징한 게임에서만 특정 아이템을 장착하면 크래시가 났습니다. 에디터에서 재현되지 않으니 로그부터 다시 봐야 했습니다."
       solution: "원인은 언리얼이 DisplayName을 따로 지정하지 않으면 사람이 읽기 좋게 문자열을 자동 변환한다는 데 있었습니다. FoamGun이 PIE에서는 'Foam Gun'으로 표기되지만 게임 빌드에서는 'FoamGun' 그대로라, 인자로 넘긴 Label과 일치하는 값이 없어 터진 것이었습니다. UMETA(DisplayName = \"...\")로 열거형이 에디터에서 어떻게 표기될지 직접 지정해 두 환경의 문자열을 일치시켰습니다."
-  tags: [C++, Unreal Engine 5.4, Lyra Starter Game]
+  tags: [C++, Unreal Engine 5.4]
   links:
     - { label: "GitHub", url: "https://github.com/THIS-ACCENT/A1" }
     - { label: "Demo", url: "https://youtu.be/hMzqnQeK3ig" }
