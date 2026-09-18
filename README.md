@@ -1,7 +1,5 @@
 # keonwookang0914.github.io
 
-강건우의 개인 포트폴리오. **손으로 짠 최소 구성 Jekyll 사이트**(테마 없음).
-
 - 배포 주소: https://keonwookang0914.github.io
 - 스택: Jekyll 4.3 + 플러그인 2종(`jekyll-seo-tag` / `jekyll-sitemap`). 무거운 의존성이 없어 윈도우 네이티브로 바로 빌드된다.
 - 글은 이 저장소가 아니라 [Velog](https://velog.io/@prid1306)에 쓴다. 사이트는 포트폴리오 역할만 한다.
