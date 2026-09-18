@@ -1,0 +1,29 @@
+# ── 사이트 정체성 ─────────────────────────────────────────────
+title: Keonwoo Kang
+tagline: Game Client / Graphics Programmer
+description: >
+  게임/엔진 프로그래밍 포트폴리오.
+url: "https://keonwookang0914.github.io"
+baseurl: ""          # user site → 도메인 루트에서 서비스되므로 비워둔다.
+lang: ko
+
+author:
+  name: Keonwoo Kang
+  email: kwkang0914@gmail.com
+
+# ── 빌드 설정 ────────────────────────────────────────────────
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# 빌드 산출물에서 제외
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CLAUDE.md
+  - serve.bat
+  - open.bat

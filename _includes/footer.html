@@ -1,0 +1,8 @@
+<footer class="footer">
+  <div class="wrap">
+    {% for s in site.data.socials %}
+      <a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>
+    {% endfor %}
+    <p style="margin-top:12px">© {{ site.time | date: '%Y' }} {{ site.author.name }}. Built with Jekyll.</p>
+  </div>
+</footer>

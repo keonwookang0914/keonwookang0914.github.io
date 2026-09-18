@@ -1,0 +1,25 @@
+<!-- ── SKILLS ───────────────────────────────────────────── -->
+<section class="section" id="skills">
+  <div class="wrap">
+    <h2 class="section__title">Skills</h2>
+    <div class="skills">
+      {% for group in site.data.skills %}
+      <div class="skills__group">
+        <h3 class="skills__category">{{ group.category }}</h3>
+        <div class="skills__row">
+          {% for skill in group.items %}
+          <div class="skill">
+            {% if skill.color_icon %}
+            <img class="skill__icon skill__icon--color" src="{{ '/assets/img/icons/' | append: skill.icon | relative_url }}" alt="{{ skill.name }} 로고" width="30" height="30" loading="lazy">
+            {% else %}
+            <span class="skill__icon" style="--icon-url: url('{{ '/assets/img/icons/' | append: skill.icon | relative_url }}');"></span>
+            {% endif %}
+            <span class="skill__name">{{ skill.name }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

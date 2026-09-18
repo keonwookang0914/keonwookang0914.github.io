@@ -1,0 +1,52 @@
+# 스킬 아이콘 카드. category별로 묶어서 섹션을 나눈다.
+# name은 화면에 보이는 라벨, icon은 assets/img/icons/ 안 파일명(확장자 포함).
+# 출처: 강건우_역량.md 기술 스택(두 소스 공통). PhysX·Chaos는 프로젝트 카드 태그에만 둔다.
+# 기본은 svg를 마스크로 써서 테마 색(회색→accent)을 입힌다. color_icon: true인 항목만
+# 원본 색상을 그대로 보여준다(단색 실루엣으로 만들기 어려운 그라디언트 로고).
+- category: "Language"
+  items:
+    - name: "C++"
+      icon: cplusplus.svg
+    # 숙련도 오르면 해제
+    # - name: "C"
+    #   icon: c.svg
+    # - name: "C#"
+    #   icon: csharp.svg
+- category: "Graphics API"
+  items:
+    - name: "Direct3D 11"
+      icon: direct3d11.svg
+    # 숙련도 오르면 해제
+    # - name: "OpenGL"
+    #   icon: opengl.svg
+    # - name: "DirectX 12"
+    #   icon: directx12.svg
+    # - name: "Vulkan"
+    #   icon: vulkan.svg
+- category: "Engine"
+  items:
+    - name: "Unreal Engine 5"
+      icon: unrealengine.svg
+    # 숙련도 오르면 해제
+    # - name: "Unity"
+    #   icon: unity.svg
+- category: "AI"
+  items:
+    - name: "Codex"
+      icon: codex.svg
+    - name: "Claude Code"
+      icon: claude-code.svg
+- category: "VCS"
+  items:
+    - name: "Perforce"
+      icon: perforce.svg
+    - name: "Git"
+      icon: git.svg
+    - name: "GitHub"
+      icon: github.svg
+- category: "Collaborate"
+  items:
+    - name: "Notion"
+      icon: notion.svg
+    - name: "Slack"
+      icon: slack.svg

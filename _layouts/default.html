@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ko' }}">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include nav.html %}
+  <main>
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <button type="button" class="to-top" id="toTop" aria-label="맨 위로">↑</button>
+  <script type="module" src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

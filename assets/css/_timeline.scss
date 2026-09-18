@@ -1,0 +1,21 @@
+/* ── 타임라인 ────────────────────────────────────────────── */
+#timeline .section__title::before { content: none; }  /* 이 섹션만 제목 앞 막대 생략 */
+/* 제목은 페이지 maxw 기준 그대로 왼쪽(wrap 안 건드림). 흐름(.timeline)만 좁혀서 가운데 배치하고,
+   그 안에서는 세로선을 정중앙에 두고 항목을 좌우로 교차시킨다. */
+.timeline { position: relative; max-width: 760px; margin: 0 auto; }
+.timeline::before {
+  content: ""; position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 2px; background: var(--border); transform: translateX(-1px);
+}
+.timeline__item { position: relative; width: 50%; padding-bottom: 32px; }
+.timeline__item:nth-child(odd)  { left: 0;   padding-right: 32px; text-align: right; }
+.timeline__item:nth-child(even) { left: 50%; padding-left: 32px; text-align: left; }
+.timeline__item::before {
+  content: ""; position: absolute; top: 5px;
+  width: 11px; height: 11px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 0 4px var(--bg);
+}
+.timeline__item:nth-child(odd)::before  { right: -6px; }
+.timeline__item:nth-child(even)::before { left: -6px; }
+.timeline__when { font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-strong); }
+.timeline__what { font-weight: 600; margin: 2px 0; }

@@ -1,0 +1,19 @@
+/* ── 맨 위로 버튼 ────────────────────────────────────────── */
+/* 배경을 불투명하게 둔다 — 반투명이면 뒤 글자가 비쳐 버튼도 글도 읽기 어려워진다. */
+.to-top {
+  position: fixed; right: 24px; bottom: 24px; z-index: 90;
+  width: 46px; height: 46px; border-radius: 12px; cursor: pointer;
+  background: var(--bg-elev); border: 1px solid var(--border); color: var(--text-dim);
+  font-size: 1.15rem; line-height: 1; display: grid; place-items: center;
+  box-shadow: var(--shadow);
+  /* 스크롤 전에는 완전히 숨긴다(반투명 상태로 남겨두지 않는다) */
+  opacity: 0; pointer-events: none; transform: translateY(8px);
+  transition: opacity 0.2s, transform 0.2s, border-color 0.2s, color 0.2s;
+}
+.to-top.is-shown { opacity: 1; pointer-events: auto; transform: none; }
+.to-top:hover { border-color: var(--accent); color: var(--accent-strong); }
+.to-top:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+@media (max-width: 560px) {
+  .to-top { right: 16px; bottom: 16px; width: 42px; height: 42px; }
+}

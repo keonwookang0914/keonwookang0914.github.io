@@ -1,0 +1,45 @@
+<!-- ── PROJECT DETAIL MODALS ────────────────────────────── -->
+{% for p in site.data.projects %}
+<div class="modal" id="project-{{ forloop.index0 }}" role="dialog" aria-modal="true" aria-labelledby="project-{{ forloop.index0 }}-title" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__panel">
+    <button type="button" class="modal__close" data-modal-close aria-label="닫기">&times;</button>
+    {% if p.image %}
+    <img class="modal__img" src="{{ p.image | relative_url }}" alt="{{ p.title }}">
+    {% endif %}
+    <div class="card__title" id="project-{{ forloop.index0 }}-title">
+      {% if p.featured %}<span class="star">★</span> {% endif %}{{ p.title }}
+    </div>
+    <div class="card__meta">{{ p.meta }}</div>
+    {% if p.tags %}
+    <div class="card__tags">
+      {% for t in p.tags %}<span>{{ t }}</span>{% endfor %}
+    </div>
+    {% endif %}
+    {% if p.links %}
+    <div class="card__links">
+      {% for l in p.links %}<a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} ↗</a>{% endfor %}
+    </div>
+    {% endif %}
+    {% if p.role %}
+    <div class="card__role"><span class="card__role-label">담당</span>{{ p.role }}</div>
+    {% endif %}
+    <div class="card__desc">{{ p.desc }}</div>
+    {% if p.highlights %}
+    <div class="hl-list">
+      {% for h in p.highlights %}
+      <section class="hl">
+        <h4 class="hl__title">{{ h.title }}</h4>
+        {% if h.problem %}
+        <p class="hl__step"><span class="hl__label hl__label--problem">문제</span>{{ h.problem }}</p>
+        {% endif %}
+        {% if h.solution %}
+        <p class="hl__step"><span class="hl__label hl__label--solution">해결</span>{{ h.solution }}</p>
+        {% endif %}
+      </section>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}

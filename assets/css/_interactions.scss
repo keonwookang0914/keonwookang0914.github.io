@@ -1,0 +1,15 @@
+/* ── 인터랙션(스크롤 등장) ───────────────────────────────── */
+/* ScrollReveal(JS)이 .reveal 을 붙이고, 보이면 .is-visible 로 켠다. */
+.reveal {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+/* 카드는 등장 후 CardTilt(JS)가 매 mousemove마다 transform을 바꾸는데, 위 transition이 남아있으면
+   그 값도 0.6s에 걸쳐 느리게 보간되어 틸트가 둔하게 반응한다 — 등장이 끝나면 꺼서 즉각 반응하게 한다. */
+.card.reveal.is-visible { transition: opacity 0.6s ease; }
+
+/* 움직임 민감 사용자: 등장 애니메이션 끔(내용은 항상 보이게) */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

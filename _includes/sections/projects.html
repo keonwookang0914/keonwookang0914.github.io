@@ -1,0 +1,25 @@
+<!-- ── PROJECTS ─────────────────────────────────────────── -->
+<section class="section" id="projects">
+  <div class="wrap">
+    <h2 class="section__title">Projects</h2>
+    <div class="cards">
+      {% for p in site.data.projects %}
+      <div class="card" role="button" tabindex="0" data-modal-open="project-{{ forloop.index0 }}" aria-haspopup="dialog">
+        {% if p.image %}
+        <img class="card__img" src="{{ p.image | relative_url }}" alt="{{ p.title }}" loading="lazy">
+        {% endif %}
+        <div class="card__title">
+          {% if p.featured %}<span class="star">★</span> {% endif %}{{ p.title }}
+        </div>
+        <div class="card__meta">{{ p.meta }}</div>
+        {% if p.tags %}
+        <div class="card__tags">
+          {% for t in p.tags %}<span>{{ t }}</span>{% endfor %}
+        </div>
+        {% endif %}
+        <span class="card__more">자세히 보기 →</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+<nav class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <div class="nav__links">
+      <a href="{{ '/#about'    | relative_url }}">About</a>
+      <a href="{{ '/#timeline' | relative_url }}">Timeline</a>
+      <a href="{{ '/#skills'   | relative_url }}">Skills</a>
+      <a href="{{ '/#projects' | relative_url }}">Projects</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="테마 전환">
+        <span class="theme-toggle__icon" id="themeIcon">🌙</span>
+        <span class="theme-toggle__label" id="themeLabel">Dark</span>
+      </button>
+    </div>
+  </div>
+</nav>

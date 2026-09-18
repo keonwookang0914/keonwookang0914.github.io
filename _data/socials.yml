@@ -1,0 +1,7 @@
+# 푸터/연락처에 표시될 링크. 필요없으면 줄을 지우면 된다.
+- name: GitHub
+  url: https://github.com/keonwookang0914
+- name: Velog
+  url: https://velog.io/@prid1306
+- name: Email
+  url: mailto:kwkang0914@gmail.com

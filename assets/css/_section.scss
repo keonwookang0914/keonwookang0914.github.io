@@ -1,0 +1,8 @@
+/* ── 섹션 공통 ───────────────────────────────────────────── */
+.section { padding: 56px 0; border-top: 1px solid var(--border); }
+.section__title {
+  font-size: 1.6rem; margin-bottom: 28px; display: flex; align-items: center; gap: 12px;
+}
+.section__title::before {
+  content: ""; width: 26px; height: 3px; background: var(--accent); border-radius: 2px;
+}

@@ -1,0 +1,34 @@
+/* ══════════════════════════════════════════════════════════════
+   디자인 토큰 — 여기만 바꾸면 사이트 전체 인상이 바뀐다.
+   ══════════════════════════════════════════════════════════════ */
+:root {
+  --accent:        #22d3ee;   /* 시안 포인트 */
+  --accent-strong: #06b6d4;
+  --accent-soft:   rgba(34, 211, 238, 0.12);
+
+  /* 라이트 모드 기본값 */
+  --bg:        #ffffff;
+  --bg-elev:   #f4f6f8;   /* 카드/블록 배경 */
+  --border:    #e2e8f0;
+  --text:      #0f172a;
+  --text-dim:  #64748b;   /* 보조 텍스트 */
+  --shadow:    0 4px 20px rgba(15, 23, 42, 0.08);
+
+  /* CDN이 싣는 이름은 'Pretendard Variable' — 'Pretendard'만 적으면 로컬 설치본이 없는 한 안 걸린다 */
+  --font-sans: "Pretendard Variable", "Pretendard", "Inter", system-ui, -apple-system,
+               "Segoe UI", "Malgun Gothic", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+
+  --maxw: 1100px;         /* 본문 최대 폭 */
+  --radius: 14px;
+}
+
+/* 다크 모드 — data-theme="dark"일 때 토큰만 갈아끼운다. */
+:root[data-theme="dark"] {
+  --bg:        #0b1120;
+  --bg-elev:   #131c2e;
+  --border:    #24304a;
+  --text:      #e6edf6;
+  --text-dim:  #94a3b8;
+  --shadow:    0 6px 28px rgba(0, 0, 0, 0.45);
+}

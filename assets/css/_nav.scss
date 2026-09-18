@@ -1,0 +1,29 @@
+/* ── 네비게이션 ──────────────────────────────────────────── */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(10px);
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+.nav__inner {
+  max-width: var(--maxw); margin: 0 auto; padding: 14px 20px;
+  display: flex; align-items: center; gap: 22px;
+}
+.nav__brand { font-weight: 800; letter-spacing: -0.03em; color: var(--text); }
+.nav__links { margin-left: auto; display: flex; gap: 20px; align-items: center; }
+.nav__links a { color: var(--text-dim); font-size: 0.94rem; font-weight: 500; }
+.nav__links a:hover { color: var(--accent-strong); text-decoration: none; }
+
+.theme-toggle {
+  background: var(--bg-elev); border: 1px solid var(--border);
+  color: var(--text); height: 38px; border-radius: 10px;
+  cursor: pointer; padding: 0 14px;
+  display: inline-flex; align-items: center; gap: 10px;
+  transition: border-color 0.2s;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+.theme-toggle__icon { font-size: 1.05rem; line-height: 1; }
+.theme-toggle__label {
+  font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500;
+  color: var(--text-dim); min-width: 34px; text-align: left;
+}

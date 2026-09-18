@@ -1,0 +1,14 @@
+<!-- ── TIMELINE ─────────────────────────────────────────── -->
+<section class="section" id="timeline">
+  <div class="wrap">
+    <h2 class="section__title">Timeline</h2>
+    <div class="timeline">
+      {% for item in site.data.timeline %}
+      <div class="timeline__item">
+        <div class="timeline__when">{{ item.when }}</div>
+        <div class="timeline__what">{{ item.what }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

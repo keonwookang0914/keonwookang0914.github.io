@@ -1,0 +1,17 @@
+---
+# 이 front matter(빈 --- 블록)가 있어야 Jekyll이 SCSS를 CSS로 컴파일한다.
+---
+
+/* 각 파일이 화면의 한 영역만 책임진다(단일 책임) — 전체 순서가 곧 페이지 위→아래 순서. */
+@use "tokens";
+@use "base";
+@use "nav";
+@use "hero";
+@use "section";
+@use "timeline";
+@use "skills";
+@use "projects";
+@use "interactions";
+@use "footer";
+@use "back-to-top";
+@use "responsive";
