@@ -3,6 +3,7 @@ import { CardTilt } from './card-tilt.js';
 import { ModalController } from './modal.js';
 import { ThemeToggle } from './theme-toggle.js';
 import { BackToTop } from './back-to-top.js';
+import { VisitorCounter } from './visitor-counter.js';
 
 new ScrollReveal([
   ['.section__title', 0],
@@ -23,3 +24,11 @@ new ThemeToggle({
 }).start();
 
 new BackToTop(document.getElementById('toTop')).start();
+
+const visitCount = document.getElementById('visitCount');
+new VisitorCounter({
+  root: visitCount,
+  today: document.getElementById('visitToday'),
+  total: document.getElementById('visitTotal'),
+  endpoint: visitCount?.dataset.endpoint,
+}).start();

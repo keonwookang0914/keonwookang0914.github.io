@@ -22,3 +22,9 @@
     } catch (e) {}
   })();
 </script>
+
+{% if jekyll.environment == "production" %}
+<!-- 방문자 통계(GoatCounter). 배포 빌드에만 넣어 로컬 미리보기는 집계하지 않는다. -->
+<script data-goatcounter="https://keonwookang0914.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+{% endif %}

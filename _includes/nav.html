@@ -1,6 +1,13 @@
 <nav class="nav">
   <div class="nav__inner">
-    <a class="nav__brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <div class="nav__id">
+      <a class="nav__brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <div class="visit-count" id="visitCount" data-endpoint="https://keonwookang0914.goatcounter.com" hidden>
+        <span class="visit-count__item"><span class="visit-count__label">Today</span> <span id="visitToday">–</span></span>
+        <span class="visit-count__sep" aria-hidden="true">·</span>
+        <span class="visit-count__item"><span class="visit-count__label">Total</span> <span id="visitTotal">–</span></span>
+      </div>
+    </div>
     <div class="nav__links">
       <a href="{{ '/#about'    | relative_url }}">About</a>
       <a href="{{ '/#timeline' | relative_url }}">Timeline</a>
