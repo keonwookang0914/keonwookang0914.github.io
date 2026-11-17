@@ -100,6 +100,39 @@ h1, h2, h3 {
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--text);
+  white-space: nowrap;
+}
+
+.nav__id {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.visit-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text);
+  white-space: nowrap;
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.visit-count[hidden] {
+  display: none;
+}
+
+.visit-count__label {
+  color: var(--text-dim);
+}
+
+.visit-count__sep {
+  color: var(--text-dim);
 }
 
 .nav__links {
@@ -820,6 +853,18 @@ h1, h2, h3 {
   .nav__links a {
     display: none;
   } /* 모바일: 링크 숨기고 브랜드+토글만 */
+  /* 방문자 수는 한 줄에 다 안 들어가므로 이름 아래 작은 줄로 내린다 */
+  .nav__id {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .visit-count {
+    padding: 0;
+    border: 0;
+    font-size: 0.7rem;
+    gap: 6px;
+  }
   .hero {
     padding: 56px 0 40px;
   }

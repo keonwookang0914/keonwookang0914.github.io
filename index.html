@@ -43,11 +43,24 @@
   })();
 </script>
 
+
+<!-- 방문자 통계(GoatCounter). 배포 빌드에만 넣어 로컬 미리보기는 집계하지 않는다. -->
+<script data-goatcounter="https://keonwookang0914.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+
 </head>
 <body>
   <nav class="nav">
   <div class="nav__inner">
-    <a class="nav__brand" href="/">Keonwoo Kang</a>
+    <div class="nav__id">
+      <a class="nav__brand" href="/">Keonwoo Kang</a>
+      <div class="visit-count" id="visitCount" data-endpoint="https://keonwookang0914.goatcounter.com" hidden>
+        <span class="visit-count__item"><span class="visit-count__label">Today</span> <span id="visitToday">–</span></span>
+        <span class="visit-count__sep" aria-hidden="true">·</span>
+        <span class="visit-count__item"><span class="visit-count__label">Total</span> <span id="visitTotal">–</span></span>
+      </div>
+    </div>
     <div class="nav__links">
       <a href="/#about">About</a>
       <a href="/#timeline">Timeline</a>
