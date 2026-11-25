@@ -16,7 +16,8 @@ export class VisitorCounter {
     if (!this.root || !this.endpoint) return;
     try {
       const [today, total] = await Promise.all([
-        this._fetchCount({ start: this._localDate() }),
+        // end를 생략하면 오늘 방문이 집계 범위에서 빠지고, end는 그 날 0시까지(미포함)라 내일 날짜를 준다.
+        this._fetchCount({ start: this._localDate(), end: this._localDate(1) }),
         this._fetchCount(),
       ]);
       this.today.textContent = today;
@@ -34,11 +35,12 @@ export class VisitorCounter {
     if (res.status === 404) return '0';            // 해당 기간에 기록이 없을 때
     if (!res.ok) throw new Error(`counter ${res.status}`);
     const data = await res.json();
-    return data.count;                              // 천 단위 구분자가 들어간 문자열
+    return data.count_unique;                       // 순 방문자 수. 천 단위 구분자가 들어간 문자열
   }
 
-  _localDate() {
+  _localDate(offsetDays = 0) {
     const d = new Date();
+    d.setDate(d.getDate() + offsetDays);
     const pad = (n) => String(n).padStart(2, '0');
     return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
   }
